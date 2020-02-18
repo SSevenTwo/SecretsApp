@@ -62,7 +62,7 @@ app.post("/login", function(req, res) {
       app.post("/register", function(req, res) {
         let newUser = new User({
           email: req.body.username,
-          password: md5(req.body.password);
+          password: md5(req.body.password)
         });
 
         newUser.save(function(err) {
